@@ -18,4 +18,6 @@ public interface UserDAOInterface
 	public void updateUser(User user);
 	//delete a single user
 	public void deleteUser(User user);
+	User getUserByName(String username);
+	boolean isPresent(String username);
 }

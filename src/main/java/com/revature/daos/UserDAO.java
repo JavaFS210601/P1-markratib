@@ -2,6 +2,8 @@ package com.revature.daos;
 
 import java.util.List;
 
+import javax.persistence.Query;
+
 import org.hibernate.Session;
 
 import com.revature.models.User;
@@ -30,6 +32,25 @@ public class UserDAO implements UserDAOInterface
 		
 		return user;
 	}
+	
+	@Override
+	public boolean isPresent(String username)
+	{
+		Session ses = HibernateUtil.getSession();
+		boolean present = false;
+		
+		List<User> userList = getAllUsers();
+		
+		for(User u: userList)
+		{
+			//if the username supplied is the same as the current user...
+			if(u.getUsername().compareTo(username) == 0)
+			{
+				present = true;
+			}
+		}
+		return present;
+	}
 
 	@Override
 	public List<User> getAllUsers()
@@ -42,7 +63,26 @@ public class UserDAO implements UserDAOInterface
 		
 		return userList;
 	}
-
+	
+	@SuppressWarnings("unchecked")
+	@Override 
+	public User getUserByName(String username)
+	{
+		Session ses = HibernateUtil.getSession();
+		
+		List<User> userList = ses.createQuery("from User").list();
+		User targetUser = new User();
+		for(User u: userList)
+		{
+			if(u.getUsername().compareTo(username) == 0)
+			{
+				targetUser = u;
+			}
+		}
+		
+		return targetUser;
+	}
+	
 	@Override
 	public List<User> getUsersByRole(int user_role_id) 
 	{

@@ -15,6 +15,7 @@ public class ERS_User_Role
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ers_user_role_id")
 	private int id;
+	
 	@Column(name = "user_role", length = 10)
 	private String role;
 	

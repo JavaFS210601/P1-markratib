@@ -17,7 +17,8 @@ public interface TicketDAOInterface
 	public List<Ticket> getTicketsByAuthor(int user_id);
 	
 	//get all tickets of a specific status
-	public List<Ticket> getTicketsByStatus(int status_id);
+	//THIS WON'T WORK WITH CURRENT IMPLEMENTATION
+//	public List<Ticket> getTicketsByStatus(int status_id);
 	
 	//get all tickets of a specific status submitted by a single user
 	public List<Ticket> getTicketsByStatus(int status_id, int user_id);
@@ -34,4 +35,8 @@ public interface TicketDAOInterface
 	public void updateTicket(Ticket ticket);
 	//delete a ticket in the DB
 	public void deleteTicket(Ticket ticket);
+	/*********************END getTicketsByAuthor*********************/
+	List<Ticket> getCompleteTickets(int status_id);
+	/*********************END getCompleteTickets*********************/
+	List<Ticket> getPendingTickets(int status_id);
 }

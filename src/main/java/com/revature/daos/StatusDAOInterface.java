@@ -17,5 +17,4 @@ public interface StatusDAOInterface
 	//delete a status
 	public void deleteStatus(ERS_Status status);
 	
-	
 }

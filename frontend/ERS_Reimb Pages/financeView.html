@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/financeView.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Money</title>
+</head>
+<body style="background-color: grey; color: ghostwhite;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12" id="mainHeader">
+                <h1 style="font-size:4vw;">Welcome Finance Manager!</h1>
+            </div>
+        </div>
+    </div>
+    <div id="pageBody">
+        <div id="decisionArea">
+            <div class="container py-3  text-center">
+                <div class="inputRow">
+                  <div class="inputCol">
+                    <label class="label" for="text">Enter Ticket ID for Decision</label>
+                    <input class="input" type="text" id="inputTicketId">
+                  </div>
+                </div>
+              </div>
+              <div class="container text-center">
+                <button type="button" id="approveButton" class="btn btn-success" >Approve Request</button>
+                <button type="button" id="denyButton" class="btn btn-danger">Deny Request</button>
+                <button type="button" id="redoButton" class="btn btn-warning">Redo Request</button>
+              </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <button type="button" class="btn btn-primary mainButton" id="allTicketsBtn">View all tickets</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-primary mainButton" id="completeTicketsBtn">View completed tickets</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-primary mainButton" id="pendingTicketsBtn">View pending tickets</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="ticketTable">
+            <div id="ticketTableHeader">
+                <!--
+                <div class="col-1 headerColumn">
+                    <h6 class="test">Ticket ID</h6>
+                </div>
+                <div class="col-1 headerColumn">
+                    <h6>Amount</h6>
+                </div>
+                <div class="col-1 headerColumn">
+                    <h6>Date Submitted</h6>
+                </div>
+                <div class="col-1 headerColumn">
+                    <h6>Date Resolved</h6>
+                </div>
+                <div class="col-1 headerColumn">
+                    <h6>Author</h6>
+                </div>
+                <div class="col-1 headerColumn">
+                    <h6>Resolver</h6>
+                </div>
+                <div class="col-1 headerColumn">
+                    <h6>Status</h6>
+                </div>
+                <div class ="col-1 headerColumn">
+                    <h6>Type</h6>
+                </div>
+                <div class="col-4 headerColumn">
+                    <h6>Description</h6>
+                </div>
+                -->
+
+                <!--
+                <div class="col-1 bodyColumn">
+                    <h6 class="test">Ticket ID</h6>
+                </div>
+                <div class="col-1 bodyColumn">
+                    <h6>Amount</h6>
+                </div>
+                <div class="col-1 bodyColumn">
+                    <h6>Date Submitted</h6>
+                </div>
+                <div class="col-1 bodyColumn">
+                    <h6>Date Resolved</h6>
+                </div>
+                <div class="col-1 bodyColumn">
+                    <h6>Author</h6>
+                </div>
+                <div class="col-1 bodyColumn">
+                    <h6>Resolver</h6>
+                </div>
+                <div class="col-1 bodyColumn">
+                    <h6>Status</h6>
+                </div>
+                <div class ="col-1 bodyColumn">
+                    <h6>Type</h6>
+                </div>
+                <div class="col-4 bodyColumn">
+                    <h6>Description</h6>
+                </div>
+                -->
+            </div>
+            <div id="ticketTableBody" >
+
+            </div>
+        </div>
+    </div>
+    <script src="JS/financeView.js"></script>
+</body>
+</html>

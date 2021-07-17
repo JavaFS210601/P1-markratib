@@ -26,7 +26,10 @@ public class HibernateUtil
 	//Once we're done with our Session, we want to close it to prevent memory leaks 
 	public static void closeSession() 
 	{
-		ses.close();
-		ses = null;
+		if(ses != null)
+		{
+			ses.close();
+			ses = null;
+		}
 	}
 }

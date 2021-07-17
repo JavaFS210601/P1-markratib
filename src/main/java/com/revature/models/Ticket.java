@@ -55,8 +55,8 @@ public class Ticket
 	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "reimb_type_id_fk")
 	private ERS_Type type;
+	
 //	//no args constructor
-
 	public Ticket() {
 		super();
 		// TODO Auto-generated constructor stub

@@ -1,0 +1,113 @@
+
+/*THESE ARE ids*/
+
+#returnButton
+{
+    
+    width: 100%;
+}
+#body
+{
+    background-color: blue;
+    filter: blur(0px);
+}
+
+#page_heading 
+{
+    padding-top: 15px;
+    text-align:center;
+    color: brown;
+    transform: rotate(-1deg);
+}
+
+#sub_page_heading
+{
+    height: 220px;
+    background-color: darkgreen;
+    border:5px solid black;
+}
+/*This is the beginning of the user input IDs*/
+#inputPassword
+{
+    transform: rotate(4deg);
+    color: blue;
+    background-color: darkred;
+}
+
+#inputUsername
+{
+    transform: rotate(-2deg);
+    color: pink;
+    background-color: darkblue;
+}
+#inputFirstName
+{
+    transform: rotate(5deg);
+    color: blue;
+    background-color: darkviolet;
+}
+#inputLastName
+{
+    transform: rotate(-1deg);
+    color: blue;
+    background-color: goldenrod;
+}
+#inputEmail
+{
+    transform: rotate(-4deg);
+    color: blue;
+    background-color: slateblue;
+}
+
+#inputRole
+{
+    transform: rotate(180deg);
+    color: blue;
+    background-color: cornflowerblue;
+}
+#submitButton
+{
+    margin-top: 10px;
+    width: 100%;
+    background-color: darkgoldenrod;
+    color: greenyellow;
+}
+/*This is the end of the user input IDs*/
+#loginButton
+{
+    transform: rotate(1deg);
+    width: 150px;
+}
+
+#createAccountButton
+{
+    transform: rotate(1deg);
+    width: 150px;
+}
+
+#uselessButton
+{
+    transform: rotate(1deg);
+    width: 150px;
+}
+
+/*THESE ARE classes*/
+.label
+{
+    background-color: lime;
+    border-radius: 10px;
+    border:2px solid black;
+}
+
+.middleCol
+{
+    background-color: chocolate;
+    padding-bottom: 10px;
+    border: 2px red dashed;
+}
+.importantText
+{
+    text-align: center;
+    font-weight: bold;
+    ;
+}

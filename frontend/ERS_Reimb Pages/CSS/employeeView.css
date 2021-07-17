@@ -1,0 +1,42 @@
+
+
+
+#mainHeader
+{
+    background-color: grey;
+    border-bottom: 4px solid darkred;
+    height: 15vh;
+}
+
+.col-12
+{
+    text-align: center;
+}
+
+.mainButton
+{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.headerColumn
+{
+    margin-top: 10px;
+    min-height: 50px;
+    border: 3px solid maroon;
+    background-color: darkblue;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.bodyColumn
+{
+    border: 3px solid maroon;
+    background-color: cadetblue);
+    min-height: 50px;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+

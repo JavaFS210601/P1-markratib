@@ -68,18 +68,52 @@ public class TicketDAO implements TicketDAOInterface
 		
 		return ticketList;
 	}/*********************END getTicketsByAuthor*********************/
-	//get all tickets of a specific status
+	//get all tickets that are not pending
 	@Override
-	public List<Ticket> getTicketsByStatus(int status_id) 
+	public List<Ticket> getCompleteTickets(int status_id) 
 	{
 		Session ses = HibernateUtil.getSession();
 		
-		List<Ticket> ticketList = ses.createQuery("from ticket where " + status_id).list();
+		List<Ticket> ticketList = getAllTickets();
+		
+		List<Ticket> returnList = new ArrayList<>();
+		
+		for(Ticket t : ticketList)
+		{
+			//if the IDs are the same, ad the ticket to the return list
+			if(t.getStatus().getId() > 1)
+			{
+				returnList.add(t);
+			}
+		}
 		
 		HibernateUtil.closeSession();
 		
-		return ticketList;
-	}/*********************END getTicketsByStatus*********************/
+		return returnList;
+	}/*********************END getCompleteTickets*********************/
+	
+	@Override
+	public List<Ticket> getPendingTickets(int status_id) 
+	{
+		Session ses = HibernateUtil.getSession();
+		
+		List<Ticket> ticketList = getAllTickets();
+		
+		List<Ticket> returnList = new ArrayList<>();
+		
+		for(Ticket t : ticketList)
+		{
+			//if the IDs are the same, ad the ticket to the return list
+			if(t.getStatus().getId() == 1)
+			{
+				returnList.add(t);
+			}
+		}
+		
+		HibernateUtil.closeSession();
+		
+		return returnList;
+	}/*********************END getPendingTickets*********************/
 	//get all tickets of a specific status submitted by a single user
 	@Override
 	public List<Ticket> getTicketsByStatus(int status_id, int user_id) 
@@ -116,11 +150,11 @@ public class TicketDAO implements TicketDAOInterface
 	public void updateTicket(Ticket ticket)
 	{
 		Session ses = HibernateUtil.getSession();
-		
-		ses.update(ticket);
-		
+		String sql = "UPDATE Ticket SET reimb_status_id_fk = "+ ticket.getStatus().getId() +" WHERE reimb_id ="+ ticket.getId();
+		ses.createQuery(sql);
 		HibernateUtil.closeSession();
 	}
+	
 	//Delete a ticket in the DB
 	public void deleteTicket(Ticket ticket)
 	{
@@ -130,4 +164,5 @@ public class TicketDAO implements TicketDAOInterface
 		
 		HibernateUtil.closeSession();
 	}
+
 }
