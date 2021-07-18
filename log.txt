@@ -1,0 +1,17 @@
+2021-07-17 21:17:58 INFO  TicketController:121 - NewTicketDTO [username=123, amount=123, type=123, date=1626581878277]
+2021-07-17 21:25:43 INFO  TicketController:121 - NewTicketDTO [username=123, amount=123, type=123, desc=, date=1626582342416]
+2021-07-17 21:36:52 INFO  TicketController:131 - NewTicketDTO [username=123, amount=123, type=123, desc=, date=1626583012035]
+2021-07-17 21:37:47 INFO  TicketController:131 - NewTicketDTO [username=123, amount=123, type=123, desc=, date=1626583067197]
+2021-07-17 21:37:53 INFO  TicketController:136 - Sat Jul 17 21:37:47 PDT 2021
+2021-07-17 21:38:36 INFO  TicketController:131 - NewTicketDTO [username=amanda, amount=123, type=1, desc=, date=1626583116102]
+2021-07-17 21:38:42 INFO  TicketController:136 - Sat Jul 17 21:38:36 PDT 2021
+2021-07-17 21:39:50 INFO  TicketController:131 - NewTicketDTO [username=amanda, amount=123, type=1, desc=, date=1626583189247]
+2021-07-17 21:39:55 INFO  TicketController:136 - Sat Jul 17 21:39:49 PDT 2021
+2021-07-17 21:41:16 INFO  TicketController:131 - NewTicketDTO [username=amanda, amount=123, type=12, desc=, date=1626583276579]
+2021-07-17 21:41:17 INFO  TicketController:136 - Sat Jul 17 21:41:16 PDT 2021
+2021-07-17 21:41:23 INFO  TicketController:131 - NewTicketDTO [username=amanda, amount=123, type=12, desc=, date=1626583283135]
+2021-07-17 21:41:23 INFO  TicketController:136 - Sat Jul 17 21:41:23 PDT 2021
+2021-07-17 21:41:44 INFO  TicketController:131 - NewTicketDTO [username=amanda, amount=915324, type=2, desc=, date=1626583304261]
+2021-07-17 21:41:44 INFO  TicketController:136 - Sat Jul 17 21:41:44 PDT 2021
+2021-07-17 21:42:04 INFO  TicketController:131 - NewTicketDTO [username=john, amount=132914098, type=2, desc=abcdefg, date=1626583324812]
+2021-07-17 21:42:05 INFO  TicketController:136 - Sat Jul 17 21:42:04 PDT 2021

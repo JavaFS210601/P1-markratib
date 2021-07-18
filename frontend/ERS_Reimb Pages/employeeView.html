@@ -16,11 +16,32 @@
             </div>
         </div>
     </div>
+    <div class = "container pt-2">
+        <div>
+            <center id="userInputArea">
+                <label class="label" for="username">Username</label>
+                <input class="input" type="text" id="inputUsername">
+                <label class="label" for="text">Ammount</label>
+                <input class="input" type="text" id="inputAmount"/>
+                <!-- <label class="label" for="text">Type</label>
+                <input class="input" type="text" id="inputType"> -->
+                <label for="cars">Type:</label>
+                    <select id="inputType" name="type">
+                        <option value="lodging">lodging</option>
+                        <option value="travel">travel</option>
+                        <option value="food">food</option>
+                        <option value="other">other</option>
+                    </select>
+                <label class="label" for="text">Description</label>
+                <input class="input" type="text" id="inputDesc">
+            </center>
+        </div>
+    </div>
     <div id="pageBody">
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <button type="button" class="btn btn-primary mainButton" id="allTicketsBtn">Create New Ticket</button>
+                    <button type="button" class="btn btn-primary mainButton" id="createTicketBtn">Create New Ticket</button>
                 </div>
                 <div class="col-4">
                     <button type="button" class="btn btn-primary mainButton" id="completeTicketsBtn">View completed tickets</button>
@@ -32,63 +53,8 @@
         </div>
 
         <div class="container" id="ticketTable">
-            <div class="row" id="ticketTableHeader">
-                <div class="col-1 headerColumn">
-                    <h6 class="test">Ticket ID</h6>
-                </div>
-                <div class="col-1 headerColumn">
-                    <h6>Amount</h6>
-                </div>
-                <div class="col-2 headerColumn">
-                    <h6>Date Submitted</h6>
-                </div>
-                <div class="col-2 headerColumn">
-                    <h6>Date Resolved</h6>
-                </div>
-                <div class="col-1 headerColumn">
-                    <h6>Author</h6>
-                </div>
-                <div class="col-1 headerColumn">
-                    <h6>Resolver</h6>
-                </div>
-                <div class="col-1 headerColumn">
-                    <h6>Status</h6>
-                </div>
-                <div class ="col-1 headerColumn">
-                    <h6>Type</h6>
-                </div>
-                <div class="col-2 headerColumn">
-                    <h6>Description</h6>
-                </div>
-                <!--
-                <div class="col-1 bodyColumn">
-                    <h6 class="test">Ticket ID</h6>
-                </div>
-                <div class="col-1 bodyColumn">
-                    <h6>Amount</h6>
-                </div>
-                <div class="col-1 bodyColumn">
-                    <h6>Date Submitted</h6>
-                </div>
-                <div class="col-1 bodyColumn">
-                    <h6>Date Resolved</h6>
-                </div>
-                <div class="col-1 bodyColumn">
-                    <h6>Author</h6>
-                </div>
-                <div class="col-1 bodyColumn">
-                    <h6>Resolver</h6>
-                </div>
-                <div class="col-1 bodyColumn">
-                    <h6>Status</h6>
-                </div>
-                <div class ="col-1 bodyColumn">
-                    <h6>Type</h6>
-                </div>
-                <div class="col-4 bodyColumn">
-                    <h6>Description</h6>
-                </div>
-                -->
+            <div id="ticketTableHeader">
+               
             </div>
             <div id="ticketTableBody" >
 

@@ -27,10 +27,10 @@ async function loginFunc()
     });
 
     console.log(response);
-
-    let data = await response.json();
-
-    console.log(data);
+    if(response.status === 200)
+    {
+        window.location.href = response.url;
+    }
 }
 
 //when the user clicks the create account button, we want to redirect them to the account creation page

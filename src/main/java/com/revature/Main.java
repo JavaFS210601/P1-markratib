@@ -66,9 +66,22 @@ public class Main
 //		System.out.println("AFTER PENDINGTICKETS IS CALLED " + ticketList.toString());
 //		ticketList.clear();
 		
-		ticketS.approveTicket(1);
+//		ticketS.approveTicket(1);
+		
+		User user1 = userDao.getUserById(1);
+		User user2 = userDao.getUserById(2);
+		ERS_Status status1 = statusDao.getStatus(1);
+		ERS_Type type4 = typeDao.getType(4);
+		
+		Ticket ticket1 = new Ticket(1, 200, null, null, "I bought stuff", user2, user1, status1, type4);
+		
+		ticketDao.updateTicket(ticket1);
 		
 		System.out.println("Exiting...");
+		
+//		Ticket ticket2 = new Ticket(1, null, null, "I bought stuff", user2, null, status1, type4);
+//		
+//		ticketDao.createTicket(ticket2);
 		
 		
 	}

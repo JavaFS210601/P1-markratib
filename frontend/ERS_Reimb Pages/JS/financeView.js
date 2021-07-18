@@ -266,11 +266,17 @@ function populateData(data)
         {
             resolveDateTag.innerHTML = "N/A";
         }
-        
-
 
         authorTag.innerHTML = data.author.username;
-        resolverTag.innerHTML = data.resolver.username;
+        if(data.resolver === null)
+        {
+            resolverTag.innerHTML = "N/A";
+        }
+        else
+        {
+            resolverTag.innerHTML = data.resolver.username;
+        }
+        
         statusTag.innerHTML = data.status.status;
         typeTag.innerHTML = data.type.type;
         descTag.innerHTML = data.desc;
@@ -370,9 +376,15 @@ function populateDataPending(data)
         }
         
 
-
+        if(data.resolver === null)
+        {
+            resolverTag.innerHTML = "N/A";
+        }
+        else
+        {
+            resolverTag.innerHTML = data.resolver.username;
+        }
         authorTag.innerHTML = data.author.username;
-        resolverTag.innerHTML = data.resolver.username;
         statusTag.innerHTML = data.status.status;
         typeTag.innerHTML = data.type.type;
         descTag.innerHTML = data.desc;

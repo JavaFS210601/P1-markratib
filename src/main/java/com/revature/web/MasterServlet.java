@@ -76,6 +76,16 @@ public class MasterServlet extends HttpServlet
 				tc.approveTicket(request, response);
 				break;
 			}
+			case "fmanager":
+			{
+				lc.financeForward(request, response);
+				break;
+			}
+			case "createTicket":
+			{
+				tc.createTicket(request, response);
+				break;
+			}
 		}
 	}
 }

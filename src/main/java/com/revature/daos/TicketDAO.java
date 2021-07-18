@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 /*CURRENT METHODS:
  * public List<Ticket> getAllTickets()
@@ -150,8 +151,18 @@ public class TicketDAO implements TicketDAOInterface
 	public void updateTicket(Ticket ticket)
 	{
 		Session ses = HibernateUtil.getSession();
-		String sql = "UPDATE Ticket SET reimb_status_id_fk = "+ ticket.getStatus().getId() +" WHERE reimb_id ="+ ticket.getId();
-		ses.createQuery(sql);
+		Transaction tx = ses.beginTransaction();
+		if(!tx.isActive())
+		{
+			tx.begin();
+		}
+//		System.out.println("*************************MERGE*************************");
+//		String sql = "UPDATE Ticket SET reimb_status_id_fk = "+ ticket.getStatus().getId() +" WHERE reimb_id ="+ ticket.getId();
+//		ses.createQuery(sql);
+		System.out.println("*************************MERGE*************************");
+		ses.merge(ticket);
+		System.out.println("*************************MERGE*************************");
+		tx.commit();
 		HibernateUtil.closeSession();
 	}
 	

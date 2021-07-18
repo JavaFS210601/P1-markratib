@@ -1,72 +1,46 @@
+
 //landing page for the website
 const url = "http://localhost:8080/P1-markratib/";
 
-const createTicket = "createTicket";
+const allTick = "getAllTickets";
 const compl = "getCompleteTickets";
 const pend = "getPendingTickets";
+const approve = "approveTicket";
+const deny = "denyTicket";
+const redo = "redoTicket";
 
-document.getElementById("createTicketBtn").addEventListener("click", createTicketFunc)
+document.getElementById("allTicketsBtn").addEventListener("click", getAllTicketsFunc);
 document.getElementById("completeTicketsBtn").addEventListener("click", getCompleteTicketsFunc);
 document.getElementById("pendingTicketsBtn").addEventListener("click", getPendingTicketsFunc);
+document.getElementById("approveButton").addEventListener("click", approveTicketFunc);
+document.getElementById("denyButton").addEventListener("click", denyTicketFunc);
+document.getElementById("redoButton").addEventListener("click", redoTicketFunc);
 
+//these arent needed
+// let allTickets = null;
+// let completedTickets = null;
+// let pendingTickets = null;
 /************************************************************BUTTON FUNCTIONS************************************************************/
-async function createTicketFunc()
+async function getAllTicketsFunc()
 {
-    console.log("Hi from create ticket :)")
-    if((document.getElementById("inputUsername").value === "" || 
-    (document.getElementById("inputAmount").value === "") ||
-    (document.getElementById("inputType").value === "")))
-    {
-        //nothing
-        console.log("INSERT VALUES")
-    }
-    else//user has data, let's do something
-    {
-        let type = 1;
-        switch(document.getElementById("inputType").value)
-        {
-            case "lodging":
-                {
-                    type = 1;
-                    break;
-                }
-            case "travel":
-                {
-                    type = 2;
-                    break;
-                }
-            case "food":
-                {
-                    type = 3;
-                    break;
-                }
-            case "other":
-                {
-                    type = 4;
-                    break;
-                }
-            default:
-                {
-                    type = 4;
-                }
+    console.log("hi from all tickets :)");
 
-        }
-        let body = {
-            username:document.getElementById("inputUsername").value,
-            amount:document.getElementById("inputAmount").value,
-            type:type,
-            desc:document.getElementById("inputDesc").value,
-            date:Date.now()
-        }
+    let response = await fetch(url + allTick, {
+        method: "GET",
+        body: null,
+        credentials: "include"
+    });
 
-        console.log(body);
-        // let response = await fetch(url + createTicket, {
-        //     method: "POST",
-        //     body: JSON.stringify(body),
-        //     credentials:"include"
-        // });
+    if(response.status === 200)
+    {
+        let data = await response.json();
+
+        console.log(data)
+
+        sendData(data);
     }
 }
+
 async function getCompleteTicketsFunc()
 {
     console.log("hi from complete tickets :)")
@@ -107,6 +81,41 @@ async function getPendingTicketsFunc()
     }
 }
 
+async function approveTicketFunc()
+{
+    console.log("Hello from the Approve button :)");
+    let ticketId = document.getElementById("inputTicketId").value;
+    // console.log("ticketId = " + ticketId);
+    //ensure the user has entered an ID #
+    if(ticketId != "" && ticketId > 0)
+    {
+        let ticket = {
+            ticketId:ticketId
+        }
+        console.log(ticket);
+
+        let response = await fetch(url + approve, {
+            method: "POST",
+            body: JSON.stringify(ticket),
+            credentials: "include"
+        });
+
+    }
+    else 
+    {
+        console.log("I should do something if this happens...")
+    }
+}
+
+async function denyTicketFunc()
+{
+    console.log("Hello from the Deny button :(");
+}
+
+async function redoTicketFunc()
+{
+    console.log("Hello from the redobutton :|");
+}
 /************************************************************SEND DATA FUNCTIONS************************************************************/
 //These should send data to the populate functions
 function sendData(data)
@@ -150,6 +159,7 @@ function sendDataPending(data)
 }
 
 /************************************************************POPULATE DATA FUNCTIONS************************************************************/
+//These should be used to populate/add data to the HTML file
 function populateHeader()
 {
     let dataSection = document.getElementById("ticketTableHeader");
@@ -256,17 +266,11 @@ function populateData(data)
         {
             resolveDateTag.innerHTML = "N/A";
         }
+        
+
 
         authorTag.innerHTML = data.author.username;
-        if(data.resolver === null)
-        {
-            resolverTag.innerHTML = "N/A";
-        }
-        else
-        {
-            resolverTag.innerHTML = data.resolver.username;
-        }
-        
+        resolverTag.innerHTML = data.resolver.username;
         statusTag.innerHTML = data.status.status;
         typeTag.innerHTML = data.type.type;
         descTag.innerHTML = data.desc;
@@ -366,15 +370,9 @@ function populateDataPending(data)
         }
         
 
-        if(data.resolver === null)
-        {
-            resolverTag.innerHTML = "N/A";
-        }
-        else
-        {
-            resolverTag.innerHTML = data.resolver.username;
-        }
+
         authorTag.innerHTML = data.author.username;
+        resolverTag.innerHTML = data.resolver.username;
         statusTag.innerHTML = data.status.status;
         typeTag.innerHTML = data.type.type;
         descTag.innerHTML = data.desc;
@@ -421,3 +419,10 @@ function removeElementsByClass(className){
         elements[0].parentNode.removeChild(elements[0]);
     }
 }
+
+
+
+
+
+
+
