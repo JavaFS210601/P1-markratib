@@ -110,11 +110,55 @@ async function approveTicketFunc()
 async function denyTicketFunc()
 {
     console.log("Hello from the Deny button :(");
+
+    let ticketId = document.getElementById("inputTicketId").value;
+    // console.log("ticketId = " + ticketId);
+    //ensure the user has entered an ID #
+    if(ticketId != "" && ticketId > 0)
+    {
+        let ticket = {
+            ticketId:ticketId
+        }
+        console.log(ticket);
+
+        let response = await fetch(url + deny, {
+            method: "POST",
+            body: JSON.stringify(ticket),
+            credentials: "include"
+        });
+
+    }
+    else 
+    {
+        console.log("I should do something if this happens...")
+    }
 }
 
 async function redoTicketFunc()
 {
     console.log("Hello from the redobutton :|");
+
+    let ticketId = document.getElementById("inputTicketId").value;
+    // console.log("ticketId = " + ticketId);
+    //ensure the user has entered an ID #
+    if(ticketId != "" && ticketId > 0)
+    {
+        let ticket = {
+            ticketId:ticketId
+        }
+        console.log(ticket);
+
+        let response = await fetch(url + redo, {
+            method: "POST",
+            body: JSON.stringify(ticket),
+            credentials: "include"
+        });
+
+    }
+    else 
+    {
+        console.log("I should do something if this happens...")
+    }
 }
 /************************************************************SEND DATA FUNCTIONS************************************************************/
 //These should send data to the populate functions

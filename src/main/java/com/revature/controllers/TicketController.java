@@ -80,36 +80,98 @@ public class TicketController
 	public void approveTicket(HttpServletRequest request, HttpServletResponse response) throws IOException 
 	{
 		//make a buffered reader to read text from the input string
-				BufferedReader reader = request.getReader();
-				StringBuilder sb = new StringBuilder();
-				//read the contents of the bufferedReader into a String
-				String line = reader.readLine();
-				
-				while(line != null)
-				{
-					//add the contents of line to the stringbulder
-					sb.append(line);
-					//assign line to the next line of data in the reader
-					line = reader.readLine();
-				}
-				//ObjectMapper only works with Strings
-				String body = new String(sb);
-				//use the ObjectMapper to read the JSON into the DTO
-				TicketDTO tDTO = om.readValue(body, TicketDTO.class);
-				
-				//if the approval was successful...
-				if(ts.approveTicket(Integer.parseInt(tDTO.getTicketId())))
-				{
-					response.setStatus(200);
-				}
-				else//approval was unsuccessful
-				{
-					response.setStatus(2023);
-				}
+		BufferedReader reader = request.getReader();
+		StringBuilder sb = new StringBuilder();
+		//read the contents of the bufferedReader into a String
+		String line = reader.readLine();
+		
+		while(line != null)
+		{
+			//add the contents of line to the stringbulder
+			sb.append(line);
+			//assign line to the next line of data in the reader
+			line = reader.readLine();
+		}
+		//ObjectMapper only works with Strings
+		String body = new String(sb);
+		//use the ObjectMapper to read the JSON into the DTO
+		TicketDTO tDTO = om.readValue(body, TicketDTO.class);
+		
+		//if the approval was successful...
+		if(ts.approveTicket(Integer.parseInt(tDTO.getTicketId())))
+		{
+			response.setStatus(200);
+		}
+		else//approval was unsuccessful
+		{
+			response.setStatus(2023);
+		}
 				
 		
 	}
+	
+	public void denyTicket(HttpServletRequest request, HttpServletResponse response) throws IOException 
+	{
+		BufferedReader reader = request.getReader();
+		StringBuilder sb = new StringBuilder();
+		//read the contents of the bufferedReader into a String
+		String line = reader.readLine();
+		
+		while(line != null)
+		{
+			//add the contents of line to the stringbulder
+			sb.append(line);
+			//assign line to the next line of data in the reader
+			line = reader.readLine();
+		}
+		//ObjectMapper only works with Strings
+		String body = new String(sb);
+		//use the ObjectMapper to read the JSON into the DTO
+		TicketDTO tDTO = om.readValue(body, TicketDTO.class);
+		
+		//if the approval was successful...
+		if(ts.denyTicket(Integer.parseInt(tDTO.getTicketId())))
+		{
+			response.setStatus(200);
+		}
+		else//approval was unsuccessful
+		{
+			response.setStatus(202);
+		}
+		
+	}
 
+	public void redoTicket(HttpServletRequest request, HttpServletResponse response) throws IOException 
+	{
+		BufferedReader reader = request.getReader();
+		StringBuilder sb = new StringBuilder();
+		//read the contents of the bufferedReader into a String
+		String line = reader.readLine();
+		
+		while(line != null)
+		{
+			//add the contents of line to the stringbulder
+			sb.append(line);
+			//assign line to the next line of data in the reader
+			line = reader.readLine();
+		}
+		//ObjectMapper only works with Strings
+		String body = new String(sb);
+		//use the ObjectMapper to read the JSON into the DTO
+		TicketDTO tDTO = om.readValue(body, TicketDTO.class);
+		
+		//if the approval was successful...
+		if(ts.redoTicket(Integer.parseInt(tDTO.getTicketId())))
+		{
+			response.setStatus(200);
+		}
+		else//approval was unsuccessful
+		{
+			response.setStatus(2023);
+		}
+		
+	}
+	
 	public void createTicket(HttpServletRequest request, HttpServletResponse response) throws IOException 
 	{
 		BufferedReader reader = request.getReader();

@@ -76,6 +76,16 @@ public class MasterServlet extends HttpServlet
 				tc.approveTicket(request, response);
 				break;
 			}
+			case "denyTicket":
+			{
+				tc.denyTicket(request, response);
+				break;
+			}
+			case "redoTicket":
+			{
+				tc.redoTicket(request, response);
+				break;
+			}
 			case "fmanager":
 			{
 				lc.financeForward(request, response);

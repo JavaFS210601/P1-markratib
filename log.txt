@@ -15,3 +15,13 @@
 2021-07-17 21:41:44 INFO  TicketController:136 - Sat Jul 17 21:41:44 PDT 2021
 2021-07-17 21:42:04 INFO  TicketController:131 - NewTicketDTO [username=john, amount=132914098, type=2, desc=abcdefg, date=1626583324812]
 2021-07-17 21:42:05 INFO  TicketController:136 - Sat Jul 17 21:42:04 PDT 2021
+2021-07-17 21:42:25 INFO  TicketController:131 - NewTicketDTO [username=john, amount=132914098, type=2, desc=abcdefg, date=1626583345223]
+2021-07-17 21:42:31 INFO  TicketController:136 - Sat Jul 17 21:42:25 PDT 2021
+2021-07-17 21:57:15 INFO  LoginService:20 - password in LoginService = 123
+2021-07-17 21:57:15 INFO  LoginService:21 - user.getPassword() in LoginService = 123
+2021-07-17 21:57:15 INFO  LoginController:90 - Performing redirect...
+URL = /P1-markratib/login/finnceView.html
+2021-07-19 18:41:29 INFO  LoginService:20 - password in LoginService = 123
+2021-07-19 18:41:29 INFO  LoginService:21 - user.getPassword() in LoginService = 123
+2021-07-19 18:41:30 INFO  LoginController:90 - Performing redirect...
+URL = /P1-markratib/login/finnceView.html
