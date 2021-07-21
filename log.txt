@@ -68,3 +68,23 @@ URL = /P1-markratib/login/finnceView.html
 2021-07-20 19:17:34 INFO  LoginService:33 - Authenticated = true
 2021-07-20 19:17:34 INFO  LoginController:90 - Performing redirect...
 URL = /P1-markratib/login/finnceView.html
+2021-07-21 12:20:01 INFO  LoginService:23 - user = User [id=8, username=mork, password=123, first_name=mark, last_name=mark, email=fdsaafds, userRole=ERS_User_Role [id=1, role=babby]]
+2021-07-21 12:20:01 INFO  LoginService:24 - password in LoginService = 123
+2021-07-21 12:20:01 INFO  LoginService:25 - user.getPassword() in LoginService = 123
+2021-07-21 12:20:01 INFO  LoginService:33 - Authenticated = true
+2021-07-21 12:20:01 INFO  LoginController:105 - Performing redirect...
+URL = /finnceView.html
+2021-07-21 12:22:07 INFO  LoginService:23 - user = User [id=1, username=merk, password=123, first_name=mark, last_name=ratib, email=fake@email.com, userRole=ERS_User_Role [id=2, role=FManager]]
+2021-07-21 12:22:07 INFO  LoginService:24 - password in LoginService = 123
+2021-07-21 12:22:07 INFO  LoginService:25 - user.getPassword() in LoginService = 123
+2021-07-21 12:22:07 INFO  LoginService:33 - Authenticated = true
+2021-07-21 12:22:07 INFO  LoginController:90 - Performing redirect...
+URL = /P1-markratib/login/finnceView.html
+2021-07-21 12:23:43 INFO  LoginService:23 - user = User [id=4, username=amanda, password=123, first_name=amanda, last_name=amanda, email=nothing, userRole=ERS_User_Role [id=1, role=babby]]
+2021-07-21 12:23:43 INFO  LoginService:24 - password in LoginService = 123
+2021-07-21 12:23:43 INFO  LoginService:25 - user.getPassword() in LoginService = 123
+2021-07-21 12:23:43 INFO  LoginService:33 - Authenticated = true
+2021-07-21 12:23:43 INFO  LoginController:105 - Performing redirect...
+URL = /finnceView.html
+2021-07-21 12:31:21 INFO  TicketController:193 - NewTicketDTO [username=amanda, amount=1000, type=1, desc=whatever, date=1626895881178]
+2021-07-21 12:31:27 INFO  TicketController:198 - Wed Jul 21 12:31:21 PDT 2021

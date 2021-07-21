@@ -49,7 +49,6 @@ async function createTicketFunc()
                 {
                     type = 4;
                 }
-
         }
         let body = {
             username:document.getElementById("inputUsername").value,
@@ -60,11 +59,11 @@ async function createTicketFunc()
         }
 
         console.log(body);
-        // let response = await fetch(url + createTicket, {
-        //     method: "POST",
-        //     body: JSON.stringify(body),
-        //     credentials:"include"
-        // });
+        let response = await fetch(url + createTicket, {
+            method: "POST",
+            body: JSON.stringify(body),
+            credentials:"include"
+        });
     }
 }
 async function getCompleteTicketsFunc()
