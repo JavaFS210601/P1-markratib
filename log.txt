@@ -44,3 +44,27 @@
 2021-07-20 18:38:59 INFO  LoginService:26 - user.getPassword() in LoginService = 123
 2021-07-20 18:38:59 INFO  LoginService:34 - Authenticated = true
 2021-07-20 18:38:59 INFO  LoginService:34 - Authenticated = false
+2021-07-20 19:03:03 INFO  LoginService:23 - user = User [id=1, username=merk, password=123, first_name=mark, last_name=ratib, email=fake@email.com, userRole=ERS_User_Role [id=2, role=FManager]]
+2021-07-20 19:03:03 INFO  LoginService:24 - password in LoginService = 123
+2021-07-20 19:03:03 INFO  LoginService:25 - user.getPassword() in LoginService = 123
+2021-07-20 19:03:03 INFO  LoginService:33 - Authenticated = true
+2021-07-20 19:03:03 INFO  LoginController:90 - Performing redirect...
+URL = /P1-markratib/login/finnceView.html
+2021-07-20 19:03:11 INFO  LoginService:23 - user = User [id=4, username=amanda, password=123, first_name=amanda, last_name=amanda, email=nothing, userRole=ERS_User_Role [id=1, role=babby]]
+2021-07-20 19:03:11 INFO  LoginService:24 - password in LoginService = 123
+2021-07-20 19:03:11 INFO  LoginService:25 - user.getPassword() in LoginService = 123
+2021-07-20 19:03:11 INFO  LoginService:33 - Authenticated = true
+2021-07-20 19:03:12 INFO  LoginController:105 - Performing redirect...
+URL = /finnceView.html
+2021-07-20 19:09:58 INFO  LoginService:23 - user = User [id=1, username=merk, password=123, first_name=mark, last_name=ratib, email=fake@email.com, userRole=ERS_User_Role [id=2, role=FManager]]
+2021-07-20 19:09:58 INFO  LoginService:24 - password in LoginService = 123
+2021-07-20 19:09:58 INFO  LoginService:25 - user.getPassword() in LoginService = 123
+2021-07-20 19:09:58 INFO  LoginService:33 - Authenticated = true
+2021-07-20 19:09:58 INFO  LoginController:90 - Performing redirect...
+URL = /P1-markratib/login/finnceView.html
+2021-07-20 19:17:34 INFO  LoginService:23 - user = User [id=1, username=merk, password=123, first_name=mark, last_name=ratib, email=fake@email.com, userRole=ERS_User_Role [id=2, role=FManager]]
+2021-07-20 19:17:34 INFO  LoginService:24 - password in LoginService = 123
+2021-07-20 19:17:34 INFO  LoginService:25 - user.getPassword() in LoginService = 123
+2021-07-20 19:17:34 INFO  LoginService:33 - Authenticated = true
+2021-07-20 19:17:34 INFO  LoginController:90 - Performing redirect...
+URL = /P1-markratib/login/finnceView.html
