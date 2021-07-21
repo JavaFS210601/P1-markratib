@@ -61,12 +61,10 @@ public class AccountController
 			}
 		}
 		
-		//check if the user is already in the database
-		if(!userDao.isPresent(aDTO.getUsername()))
+		User newUser = new User(aDTO.getUsername(), aDTO.getPassword(), aDTO.getFirstName(), aDTO.getLastName(), aDTO.getEmail(), userRole);
+		//Give the new user to the account service
+		if(as.CreateAccount(newUser))
 		{
-			//if they are not, add them ot the batabase
-			User newUser = new User(aDTO.getUsername(), aDTO.getPassword(), aDTO.getFirstName(), aDTO.getLastName(), aDTO.getEmail(), userRole);
-			userDao.insertUser(newUser);
 			response.setStatus(201);
 			response.getWriter().print("Account creation successful!");
 		}

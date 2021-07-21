@@ -8,7 +8,7 @@
 }
 #body
 {
-    background-color: blue;
+    background-color: chartreuse;
     filter: blur(0px);
 }
 
@@ -23,7 +23,7 @@
 #sub_page_heading
 {
     height: 220px;
-    background-color: darkgreen;
+    background-color: greenyellow;
     border:5px solid black;
 }
 /*This is the beginning of the user input IDs*/

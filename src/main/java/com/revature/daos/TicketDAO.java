@@ -57,7 +57,7 @@ public class TicketDAO implements TicketDAOInterface
 		
 		return ticket;
 	}/*********************END getTicketById*********************/
-	//get all tickets submited by a single user
+	//get all tickets submitted by a single user
 	@Override
 	public List<Ticket> getTicketsByAuthor(int user_id) 
 	{

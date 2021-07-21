@@ -14,16 +14,23 @@ public class LoginService
 	//returns true if the user is logged in successfully
 	public boolean login(String username, String password)
 	{
-		User user = uDAO.getUserByName(username);
 		boolean authenticated = false;
-		//compare the password in the DB to the password provided
-		log.info("password in LoginService = " + password);
-		log.info("user.getPassword() in LoginService = " + user.getPassword());
-		if(user.getPassword().compareTo(password) == 0)
+		User user = uDAO.getUserByName(username);
+		//check if the user is in the database
+		if(user.getId() != 0)
 		{
-			//change authenticated to true, username and password were correct
-			authenticated = true;
+			//compare the password in the DB to the password provided
+			log.info("user = " + user);
+			log.info("password in LoginService = " + password);
+			log.info("user.getPassword() in LoginService = " + user.getPassword());
+			if(user.getPassword().compareTo(password) == 0)
+			{
+				//change authenticated to true, username and password were correct
+				authenticated = true;
+			}
+
 		}
+		log.info("Authenticated = " + authenticated);
 		return authenticated;
 	}
 }
