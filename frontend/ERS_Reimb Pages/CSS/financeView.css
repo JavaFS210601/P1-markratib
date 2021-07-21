@@ -1,12 +1,35 @@
 
-
+#leftDuck
+{
+    margin: auto;
+    display:block;
+    width: 80%;
+    transform: scaleX(-1);
+}
+#rightDuck
+{
+    margin:auto;
+    display: block;
+    width: 80%;
+    
+}
 
 #mainHeader
 {
     background-color: indigo;
     border-bottom: 4px solid crimson;
-    height: 15vh;
+    height: 220px;
+    
 }
+
+#page_heading 
+{
+    padding-top: 15px;
+    text-align:center;
+    color: aquamarine;
+}
+
+
 
 .btn
 {

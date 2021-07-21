@@ -1,18 +1,31 @@
 
 
-
-#mainHeader
+#leftDuck
 {
+    margin: auto;
+    display:block;
+    width: 68%;
+}
+#rightDuck
+{
+    margin:auto;
+    display: block;
+    width: 68%;
+}
+
+
+#sub_page_heading
+{
+    height: 220px;
     background-color: grey;
-    border-bottom: 4px solid darkred;
-    height: 15vh;
+    border:5px solid darkred;
 }
 
-#userInputArea
+#page_heading 
 {
-
+    padding-top: 15px;
+    text-align:center;
 }
-
 .col-12
 {
     text-align: center;
